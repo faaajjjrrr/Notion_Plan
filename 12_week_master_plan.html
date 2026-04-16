@@ -1,0 +1,479 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans);color:var(--color-text-primary)}
+.wrap{padding:8px 0 32px}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.nb{font-size:12px;font-weight:500;padding:5px 12px;border-radius:20px;border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);cursor:pointer;transition:all .15s}
+.nb.on{background:#EEEDFE;border-color:#AFA9EC;color:#3C3489}
+.pg{display:none}.pg.on{display:block}
+.wk{margin-bottom:24px}
+.wk-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.wk-num{font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;white-space:nowrap}
+.p1{background:#EEEDFE;color:#3C3489}
+.p2{background:#E1F5EE;color:#085041}
+.p3{background:#FAEEDA;color:#633806}
+.wk-title{font-size:15px;font-weight:500}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.box{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:12px 14px}
+.box-title{font-size:12px;font-weight:500;margin-bottom:5px}
+.box-body{font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+.tag{display:inline-block;font-size:10px;font-weight:500;padding:2px 7px;border-radius:10px;margin-bottom:6px}
+.t-tech{background:#E6F1FB;color:#0C447C}
+.t-comm{background:#E1F5EE;color:#085041}
+.t-art{background:#FAEEDA;color:#633806}
+.t-li{background:#EEEDFE;color:#3C3489}
+.t-apply{background:#FCEBEB;color:#A32D2D}
+.t-mock{background:#FAECE7;color:#712B13}
+.day-row{display:grid;grid-template-columns:80px 1fr;gap:8px;margin-bottom:8px;align-items:start}
+.day-label{font-size:11px;font-weight:500;color:var(--color-text-secondary);padding-top:3px}
+.day-tasks{font-size:12px;color:var(--color-text-primary);line-height:1.6}
+.day-tasks span{display:inline-block;margin-right:4px}
+.divider{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:16px 0}
+.rule-box{border-radius:10px;padding:12px 14px;margin-bottom:12px}
+.rule-red{background:#FCEBEB;border:0.5px solid #F09595}
+.rule-red .rule-title{font-size:12px;font-weight:500;color:#A32D2D;margin-bottom:4px}
+.rule-red .rule-body{font-size:12px;color:#791F1F;line-height:1.6}
+.rule-green{background:#E1F5EE;border:0.5px solid #5DCAA5}
+.rule-green .rule-title{font-size:12px;font-weight:500;color:#085041;margin-bottom:4px}
+.rule-green .rule-body{font-size:12px;color:#0F6E56;line-height:1.6}
+.rule-purple{background:#EEEDFE;border:0.5px solid #AFA9EC}
+.rule-purple .rule-title{font-size:12px;font-weight:500;color:#3C3489;margin-bottom:4px}
+.rule-purple .rule-body{font-size:12px;color:#534AB7;line-height:1.6}
+.section-label{font-size:10px;font-weight:500;color:var(--color-text-secondary);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.full{grid-column:1/-1}
+</style>
+
+<div class="wrap">
+<h2 class="sr-only">12-week SaaS support master plan with integrated technical and communication practice</h2>
+
+<div class="nav">
+  <button class="nb on" onclick="show('system')">How it works</button>
+  <button class="nb" onclick="show('p1')">Phase 1 (W1–5)</button>
+  <button class="nb" onclick="show('p2')">Phase 2 (W6–9)</button>
+  <button class="nb" onclick="show('p3')">Phase 3 (W10–12)</button>
+  <button class="nb" onclick="show('daily')">Daily structure</button>
+</div>
+
+<div id="system" class="pg on">
+  <div class="section-label">The system — read this first</div>
+
+  <div class="rule-red">
+    <div class="rule-title">Non-negotiable daily habits (every single study day, no exceptions)</div>
+    <div class="rule-body">
+      1. After each resource you study: write 3–5 sentences explaining it as if to a non-technical customer. No bullet points. Full sentences. This is your comprehension check AND writing drill combined.<br><br>
+      2. At the end of each study session: write one internal note (4–6 sentences, technical tone) logging what you investigated. Treat it like a real ticket note.<br><br>
+      3. LinkedIn: 15 minutes — either send 1 connection request, reply to comments, or comment on 3 posts. Rotate daily. Never skip.
+    </div>
+  </div>
+
+  <div class="rule-green">
+    <div class="rule-title">Weekly non-negotiables (every week, no exceptions)</div>
+    <div class="rule-body">
+      — One artifact published to Notion before the week ends. No partial artifacts. Done means published with a shareable link.<br>
+      — One LinkedIn post on Monday morning based on what you learned that week.<br>
+      — Three real support reply rewrites (find bad replies on Zendesk forums or Intercom blog, rewrite them, compare). Takes 20 minutes total. Do it in one sitting.
+    </div>
+  </div>
+
+  <div class="rule-purple">
+    <div class="rule-title">How technical learning and communication are integrated — not separate</div>
+    <div class="rule-body">
+      Every concept you learn has three outputs: (1) plain-English customer explanation, (2) internal technical note, (3) one sentence for the artifact. You never study something without producing all three. This is how 2–3 hours/day covers both tracks without splitting time between them.
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="section-label">Time breakdown per day</div>
+  <div class="grid3">
+    <div class="box">
+      <div class="tag t-tech">Technical learning</div>
+      <div class="box-title">~60 min/day</div>
+      <div class="box-body">Reading, watching, practicing the week's core concept. Structured, resource-specific.</div>
+    </div>
+    <div class="box">
+      <div class="tag t-comm">Communication output</div>
+      <div class="box-title">~45 min/day</div>
+      <div class="box-body">Embedded writing after each resource. Customer explanation + internal note. Not separate time — part of studying.</div>
+    </div>
+    <div class="box">
+      <div class="tag t-li">LinkedIn + artifact</div>
+      <div class="box-title">~30 min/day</div>
+      <div class="box-body">15 min LinkedIn daily. Artifact built incrementally across 5 days, published Day 6.</div>
+    </div>
+  </div>
+</div>
+
+<div id="p1" class="pg">
+  <div class="section-label">Phase 1 — Build foundations (weeks 1–5)</div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p1">Week 1</span><span class="wk-title">How SaaS systems break</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Core concepts to learn</div>
+        <div class="box-body">Frontend → backend → database flow. HTTP request/response cycle. The 10 key status codes (200, 201, 400, 401, 403, 404, 429, 500, 502, 503). APIs as a black box. Auth vs authorization. How logs fit into diagnosis.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">Writing produced this week</div>
+        <div class="box-body">After each resource: 3–5 sentence customer explanation. Daily: one internal note. Extra: write a one-sentence plain-English definition of each of the 10 status codes as if telling a frustrated customer what happened.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">System failure map</div>
+        <div class="box-body">One page. Diagram of frontend → backend → DB flow. Table: error code → what failed → what it means to a customer. 3 example issue scenarios mapped to layers. Publish by Day 6.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-li">LinkedIn</div>
+        <div class="box-title">Post + outreach</div>
+        <div class="box-body">Monday post: what you learned about how SaaS breaks. Send 3 connection requests to support engineers this week. No ask — just connect with a note.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p1">Week 2</span><span class="wk-title">Professional writing from zero</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Support ticket lifecycle</div>
+        <div class="box-body">How a ticket moves from open to resolved. Priority vs severity. What a good ticket looks like structurally. Apply Week 1 knowledge inside ticket scenarios. Read 10 real tickets on Zendesk public forums — study their structure.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">Writing is the primary focus</div>
+        <div class="box-body">Rewrite 10 real bad support replies — before and after versions side by side. Practice customer vs internal tone switching daily. Read your writing aloud every session. If it sounds robotic, rewrite it. This week writing gets 60% of your time.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">10 rewritten replies</div>
+        <div class="box-body">Notion page with 10 before/after reply rewrites. Label each: what was wrong, what you fixed, which principle you applied. This is your first public writing sample. It must be clean.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-li">LinkedIn</div>
+        <div class="box-title">Post + outreach</div>
+        <div class="box-body">Monday post: one specific thing you noticed about how good support communication works vs bad. Send 3 connection requests. Reply to anyone who accepted last week — send the one-question follow-up.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p1">Week 3</span><span class="wk-title">Ticket thinking + tools</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Zendesk/Jira concepts + SQL basics</div>
+        <div class="box-body">Ticketing system concepts (no account needed — read Zendesk documentation). Internal notes vs customer replies in a system. Basic SELECT queries — WHERE, FROM, LIMIT. Practice on sqlzoo.net or w3schools SQL sandbox. Not optional.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">Write 5 full tickets from scratch</div>
+        <div class="box-body">Each ticket: user complaint → your clarifying questions → suspected layer with reasoning → customer reply → internal note. Two separate tones in every ticket. Read each customer reply aloud before finalizing. Reject anything that sounds formal-robotic.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">5 complete tickets</div>
+        <div class="box-body">Published Notion page. Each ticket clearly labeled with all 5 sections. This is shareable proof of support thinking. URL goes in your LinkedIn Featured section this week.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-li">LinkedIn</div>
+        <div class="box-title">Post + Featured section</div>
+        <div class="box-body">Monday post: share your ticket artifact with a brief explanation of what you learned building it. Add your Notion portfolio link to your LinkedIn Featured section this week — do not wait.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p1">Week 4</span><span class="wk-title">Logs + evidence-based diagnosis</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Reading logs in practice</div>
+        <div class="box-body">Run journalctl -n 50 in your Linux terminal. Read GitHub's and Atlassian's public incident history on their status pages — study how they describe failures. Learn timestamp reading, error pattern recognition, what a stack trace tells you vs doesn't.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">Log-to-plain-English translation</div>
+        <div class="box-body">For every log entry or incident you study: write two versions — one technical internal note, one plain-English customer message. The gap between those two outputs is your communication skill being built. Daily after each session.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">Log investigation walkthrough</div>
+        <div class="box-body">One real or simulated issue. Document: what logs you checked, what signals you saw, what conclusion you reached, what you would tell the customer. Both the internal reasoning and the customer-facing output must appear.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-li">LinkedIn</div>
+        <div class="box-title">Post + outreach</div>
+        <div class="box-body">Monday post: one unexpected thing you learned from reading real incident logs. 3 connection requests. If anyone from earlier weeks replied to your follow-up question, engage back this week.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p1">Week 5</span><span class="wk-title">Incidents + security — and start applying</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Incidents + security scenarios</div>
+        <div class="box-body">Incident vs ticket distinction. Severity levels. Escalation rules. Account compromise, MFA failures, suspicious login reports — correct response for each. What NOT to say. Your cybersecurity background makes this your strongest differentiator. Treat it seriously.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">High-pressure writing</div>
+        <div class="box-body">Write 2 customer incident updates (calm, no over-promising). Write 1 internal escalation note. Write 5 security scenario responses. For each security scenario: what you say, what you don't say, and why. Tone under pressure is different — practice it explicitly.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">Incident pack + security playbook</div>
+        <div class="box-body">Combined artifact: incident announcement, 2 customer updates, 1 internal escalation, 1 post-incident summary. Plus: 5 security scenarios with correct support responses. This is your strongest artifact — it signals both technical and security awareness.</div>
+      </div>
+      <div class="box full">
+        <div class="tag t-apply">Start applying this week</div>
+        <div class="box-title">3 applications — do not wait for perfect</div>
+        <div class="box-body">Apply to 3 companies from your target list using your existing Notion portfolio as proof. You will likely be rejected. That is the point — rejection at week 5 gives you real market signal 7 weeks earlier than the original plan. Log every application: company, role, date, outcome, what you think was missing. That log is your feedback loop.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="p2" class="pg">
+  <div class="section-label">Phase 2 — Build proof + apply in parallel (weeks 6–9)</div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p2">Week 6</span><span class="wk-title">Communication mastery under pressure</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Failure patterns recognition</div>
+        <div class="box-body">Common SaaS failure patterns: intermittent errors, partial outages, client-specific issues, data inconsistency, performance complaints. For each: what signals appear in logs, what layer is likely, what questions to ask first.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">Same issue, three tones</div>
+        <div class="box-body">Take one failure scenario. Write: (1) reply to a calm customer, (2) reply to an angry customer, (3) internal engineering escalation note. Three completely different registers, same underlying facts. Do this for 3 different scenarios this week. This is the core communication exercise of the entire plan.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">Communication style guide</div>
+        <div class="box-body">Your personal do/don't guide built from 6 weeks of writing. Examples of good vs bad phrasing. Tone switching examples. Over-promising language to avoid. This becomes a reference you use in every future ticket you write.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-apply">Applications</div>
+        <div class="box-title">5 applications this week</div>
+        <div class="box-body">Increase from 3 to 5. Use your Week 5 rejection data to refine your cover note or outreach message. For every application you care about: find the hiring manager on LinkedIn and send the cold apply message from the outreach template.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p2">Week 7</span><span class="wk-title">End-to-end ticket simulations</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Multi-step issue handling</div>
+        <div class="box-body">Cross-team communication. Status updates over time. How an issue evolves from first report to resolution. How to write updates when you don't yet have an answer. Environment awareness: prod vs staging difference in real support contexts.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">3 full case studies</div>
+        <div class="box-body">Each case: initial report → investigation → 2 status updates → resolution → reflection. Every piece of customer-facing writing must be read aloud before finalizing. Every internal note must be precise, not vague. No filler phrases like "I will look into this."</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">3 case studies — published</div>
+        <div class="box-body">Most important artifact in the plan. Shows complete job readiness from report to close. Must be clean, well-structured, and linkable. Share the URL in your LinkedIn post this week and in your outreach messages going forward.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-mock">Mock interviews start</div>
+        <div class="box-title">First mock session this week</div>
+        <div class="box-body">Do not wait until Week 10. Do one mock session: answer these three questions out loud, recorded — "Walk me through how you'd handle a user locked out of their account," "How do you prioritize two urgent tickets at once," "What does a 503 error mean and what would you do?" Watch the recording once. It will be uncomfortable. Do it anyway.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p2">Week 8</span><span class="wk-title">SLA, business awareness + patterns</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">SLAs + failure patterns cheat sheet</div>
+        <div class="box-body">SLA definitions, response time expectations, breach consequences. Symptom → likely cause → next step for 10 common SaaS failure patterns. Customer retention mindset: why a ticket is not just a ticket — it is a retention event. Escalation cost awareness.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">Business-aware writing</div>
+        <div class="box-body">Write 5 prioritization decisions with written justifications. Each one: the issue, your priority call, the business reason behind it. Practice writing SLA breach notifications — these require a specific tone that is apologetic but not panicked. Different from standard support writing.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">Failure patterns cheat sheet + decision log</div>
+        <div class="box-body">Combined: symptom → cause → next step table for 10 patterns. Plus: 5 prioritization decisions with business reasoning. This proves both pattern recognition speed and business thinking.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-mock">Mock interview #2</div>
+        <div class="box-title">Second session — business questions</div>
+        <div class="box-body">This week's mock focuses on: "How do you handle an SLA breach situation," "Tell me about a time you had to prioritize competing urgent requests," "What does good support look like to you?" Answer out loud, recorded. Compare to last week's recording — your answers should be noticeably less hesitant.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p2">Week 9</span><span class="wk-title">Consolidation + application ramp-up</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Review and gap-fill</div>
+        <div class="box-body">No new major concept this week. Review your weakest area from Weeks 1–8. If logs were unclear, revisit. If SQL felt shaky, do more practice. Use your application rejection feedback to identify what technical gaps are showing up in screenings.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">Rewrite your worst artifacts</div>
+        <div class="box-body">Go back to Week 1 or 2 artifacts. Rewrite the weakest communication pieces with 8 weeks of additional skill. The improvement gap will be visible and motivating. Also: compare your Week 2 rewrites to your Week 8 writing. That difference is your proof of growth.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">Support decision log</div>
+        <div class="box-body">5 issues, your prioritization, your business reasoning. Keep it clean and concise. This week's artifact is lighter — the consolidation work is the main output.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-apply">Applications</div>
+        <div class="box-title">7 applications this week</div>
+        <div class="box-body">Ramp up. You now have 7 published artifacts and 4+ weeks of application experience. Your profile and portfolio are substantially better than Week 5. Target companies where your cybersecurity background is explicitly mentioned in the job description — that is your clearest differentiator.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="p3" class="pg">
+  <div class="section-label">Phase 3 — Close the gap (weeks 10–12)</div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p3">Week 10</span><span class="wk-title">Resume + portfolio finalization</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Resume bullets from artifacts</div>
+        <div class="box-body">Every resume bullet maps to a specific artifact. No generic claims. "Built 5 end-to-end ticket simulations covering auth failures, partial outages, and data inconsistency" — not "strong troubleshooting skills." Technical specificity in your resume language proves you actually did the work.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">Resume and portfolio language</div>
+        <div class="box-body">Your resume is a communication artifact. Every bullet must be active voice, specific, and outcome-oriented. Your Notion portfolio pages must have clean introductory text — not just raw artifacts. Add 2–3 sentence context to each artifact explaining what it demonstrates. Get one person in tech to review both.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">Portfolio index page</div>
+        <div class="box-body">One clean Notion index page linking all artifacts with brief descriptions. This is the URL you send to hiring managers. It should take under 60 seconds to scan and understand what you can do. Clean, no clutter, no filler text.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-mock">Mock interview #3</div>
+        <div class="box-title">Full simulation — 30 minutes</div>
+        <div class="box-body">Simulate a real interview: 10 questions, timed, recorded. Include: scenario questions, "tell me about yourself," "why SaaS support," technical diagnosis walkthrough, one curveball. After: watch the full recording and write 3 specific things to improve. Not vague — specific.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p3">Week 11</span><span class="wk-title">Interview pressure testing</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Interview answer bank — technical</div>
+        <div class="box-body">Written answers to 10 technical support questions. "What is the difference between a 401 and 403?" "A user says the app is slow — walk me through your diagnosis." "What would you check first if a user can't log in?" Each answer: 3–5 sentences, structured, no rambling.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">Verbal walkthroughs</div>
+        <div class="box-body">Take your written answers and practice them spoken — out loud, timed. Target: 90 seconds per answer maximum. Record yourself. The gap between your written and spoken quality is your biggest remaining risk. If your spoken answers are significantly weaker, spend the rest of this week on verbal practice only.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-art">Notion artifact</div>
+        <div class="box-title">Interview answer bank</div>
+        <div class="box-body">10 written answers published to Notion. Not just for the artifact — use it as a study reference. Review it the morning of every interview. It should include both technical and behavioral answers.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-apply">Applications</div>
+        <div class="box-title">8–10 applications this week</div>
+        <div class="box-body">Full execution pace. Track every application in a dedicated Notion tracker: company, role, date applied, stage, feedback, follow-up sent. If you have any active interviews from earlier applications, prioritize interview prep over new applications this week.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wk">
+    <div class="wk-head"><span class="wk-num p3">Week 12</span><span class="wk-title">Full execution — this does not end here</span></div>
+    <div class="grid">
+      <div class="box">
+        <div class="tag t-tech">Technical focus</div>
+        <div class="box-title">Keep the technical edge sharp</div>
+        <div class="box-body">Continue reading SaaS product changelogs, incident postmortems, and status pages weekly. Follow 3–5 SaaS companies on LinkedIn and read their engineering blog updates. Technical knowledge that goes stale shows in interviews. Keep it fresh passively.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-comm">Communication output</div>
+        <div class="box-title">Iterate from real feedback</div>
+        <div class="box-body">Every interview rejection or screening feedback is a communication data point. If you are not getting past screening, your written application is the problem. If you are not passing interviews, your verbal communication or technical answers are the problem. Diagnose precisely, fix specifically.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-apply">Applications</div>
+        <div class="box-title">8–10 per week until you land</div>
+        <div class="box-body">Week 12 is not the end of applications — it is the minimum viable pace. Continue until you have an offer. Update your tracker weekly. If you have been applying for 4+ weeks with zero responses, your resume or LinkedIn headline is the bottleneck — fix those first before sending more applications.</div>
+      </div>
+      <div class="box">
+        <div class="tag t-mock">Mock interview #4+</div>
+        <div class="box-title">Weekly until you land</div>
+        <div class="box-body">One mock session per week from here on. Rotate question types. Use real interview questions from Glassdoor for SaaS support roles at your target companies. The goal is that by week 12, answering these questions feels automatic — not rehearsed, automatic.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="daily" class="pg">
+  <div class="section-label">Daily structure — 6 days on, 1 day off</div>
+
+  <div class="rule-purple">
+    <div class="rule-title">Morning session (1–1.5 hrs) — technical learning</div>
+    <div class="rule-body">Study the week's core technical resource. After each section or video: write the 3–5 sentence customer explanation immediately, while it is fresh. Do not batch this — do it per section. This is what locks in comprehension and builds writing simultaneously.</div>
+  </div>
+
+  <div class="rule-green">
+    <div class="rule-title">Evening session after 6PM (1–1.5 hrs) — output production</div>
+    <div class="rule-body">
+      Day 1–2: Produce the communication output for the week (rewrites, ticket drafts, scenario responses).<br>
+      Day 3–4: Build the week's artifact incrementally — do not try to write the full artifact in one sitting.<br>
+      Day 5: Finalize and publish artifact to Notion. Write the LinkedIn post draft.<br>
+      Day 6: Publish LinkedIn post. Do the 3 reply rewrites. Send connection requests. Applications (from Week 5 onward).
+    </div>
+  </div>
+
+  <div class="rule-red">
+    <div class="rule-title">What the off day is for</div>
+    <div class="rule-body">Rest. Not catching up. Not "light studying." If you are behind on an artifact, you missed time during the week — fix the daily structure, do not compensate on rest days. Rest days protect the quality of your six working days. Skipping them degrades output over time.</div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="section-label">The 15-minute LinkedIn daily rotation</div>
+  <div class="grid">
+    <div class="box">
+      <div class="day-row"><span class="day-label">Mon</span><span class="day-tasks">Publish weekly learning post. Reply to all comments on previous week's post.</span></div>
+      <div class="day-row"><span class="day-label">Tue</span><span class="day-tasks">Comment on 3 posts from support engineers or hiring managers at target companies. Genuine comments only.</span></div>
+      <div class="day-row"><span class="day-label">Wed</span><span class="day-tasks">Send 3 connection requests with notes. Use the outreach template.</span></div>
+    </div>
+    <div class="box">
+      <div class="day-row"><span class="day-label">Thu</span><span class="day-tasks">Send follow-up message to anyone who accepted your connection this week or last week.</span></div>
+      <div class="day-row"><span class="day-label">Fri</span><span class="day-tasks">Check who viewed your profile. If a recruiter viewed it, send a connection request that day.</span></div>
+      <div class="day-row"><span class="day-label">Sat</span><span class="day-tasks">If artifact is done, post artifact post. Otherwise use this slot for applications (Week 5+).</span></div>
+    </div>
+  </div>
+</div>
+
+</div>
+<script>
+function show(id){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  event.target.classList.add('on');
+}
+</script>
